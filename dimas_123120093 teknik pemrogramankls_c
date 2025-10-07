@@ -1,0 +1,44 @@
+01 file handing text file
+
+filepath="/content/ini baris 1.txt"
+
+f = open(filepath, "r")
+
+print(f.read())
+
+JSON (JAVA SCRIPTS OBJECT NOTATION)
+data = {
+    "Nama" : "Dimas",
+    "Usia" : 20,
+    "Prodi" : "Teknik Geofisika"
+}
+
+import json
+
+with open("data.json", "w") as f:
+  json.dump(data, f)
+
+data = bytes([120, 3, 225, 0, 100])
+
+with open("data.bin", "wb") as f:
+  f.write(data)
+
+file handling di file biner
+data = bytes([120,3,225,0,100])
+
+with open("data.bin", "wb") as f:
+     f.write(data)
+
+# Membaca file biner
+with open("data.bin", "rb") as f:
+      isi = f.read()
+      print(list(isi))
+try-exceptt
+
+
+print("ini eksekusi kode sebelumnya")
+try:
+  x=10.0/0
+except:
+  print("tidak bisa dibagi nol")
+print("ini eksekusi kode selanjutnya") 
